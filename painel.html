@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel do Cliente | MePrestimo</title>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+  <script src="js/firebase.js"></script>
+  <script defer src="js/cliente.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="p-6 max-w-2xl mx-auto">
+    <h1 class="text-2xl font-bold mb-4">Bem-vindo, <span id="nomeUser"></span> 👋</h1>
+    <div class="bg-white rounded shadow p-4 mb-4">
+      <p><strong>Score:</strong> <span id="score">...</span></p>
+      <p><strong>Fidelidade:</strong> <span id="fidelidade">...</span></p>
+    </div>
+
+    <h2 class="text-xl font-semibold mb-2">Solicitar Empréstimo</h2>
+    <form id="formEmprestimo" class="space-y-2 mb-4">
+      <input type="number" id="valor" placeholder="Valor desejado" class="w-full px-4 py-2 border rounded" required />
+      <button type="submit" class="bg-purple-700 text-white px-4 py-2 rounded w-full hover:bg-purple-800 transition">Solicitar</button>
+    </form>
+
+    <h2 class="text-xl font-semibold mb-2">Histórico</h2>
+    <ul id="historico" class="space-y-2"></ul>
+  </div>
+</body>
+</html>
